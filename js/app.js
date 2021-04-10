@@ -1,5 +1,6 @@
 //Variables
 const resultados=document.querySelector('#resultado')
+const selecyear=document.querySelector('#year')
 
 ejecutar();
 function ejecutar(){
@@ -7,6 +8,9 @@ function ejecutar(){
     //Eventos
     document.addEventListener('DOMContentLoaded',()=>{
         mostrarautos();
+
+        //llenar opciones de años
+        llenaryear();
     })
 
 
@@ -26,4 +30,15 @@ function mostrarautos(){
     });
 
 
+}
+
+
+function llenaryear(){
+    for (let i = 2021; i > 2010; i--) {
+        const ye=document.createElement('option');
+        ye.value=i;
+        ye.textContent=i;
+        selecyear.appendChild(ye);
+        
+    }
 }
